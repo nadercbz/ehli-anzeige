@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ehl-i Kebap · Anzeige A4 · 12 Versionen</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{--kohle:#0E0C0B;--k2:#181412;--rot:#E0301E;--messing:#C9A15E;--asche:#EDE6DC;--rauch:#9a8f84;--linie:rgba(201,161,94,.25)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--kohle);color:var(--asche);font-family:IT,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+header{max-width:1240px;margin:0 auto;padding:56px 24px 28px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between}
+header .k{font-weight:700;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--rot)}
+header h1{font-family:Gloock;font-weight:400;font-size:clamp(34px,6vw,64px);line-height:1;margin-top:10px}
+header h1 em{font-style:normal;color:var(--messing)}
+header p{max-width:440px;color:var(--rauch);font-size:15px;line-height:1.55}
+main{max-width:1240px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:28px}
+.v{background:var(--k2);border:1px solid var(--linie);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.v button.bild{all:unset;cursor:zoom-in;display:block;aspect-ratio:216/303;background:#000;overflow:hidden}
+.v img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.v button.bild:hover img{transform:scale(1.03)}
+.v .t{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.v .nr{font-weight:800;font-size:11px;letter-spacing:.3em;color:var(--messing)}
+.v h2{font-family:Gloock;font-weight:400;font-size:25px;line-height:1.05}
+.v p{color:var(--rauch);font-size:14px;line-height:1.5;flex:1}
+.v .dl{display:flex;gap:8px;margin-top:8px}
+.v .dl a{flex:1;text-align:center;text-decoration:none;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:11px 8px;border-radius:999px;border:1px solid var(--linie);color:var(--asche)}
+.v .dl a.pdf{background:var(--rot);border-color:var(--rot);color:#fff}
+.v .dl a:hover{filter:brightness(1.12)}
+.fav{position:absolute}
+.info{max-width:1240px;margin:0 auto;padding:0 24px 64px;color:var(--rauch);font-size:13px;line-height:1.7;border-top:1px solid var(--linie);padding-top:22px}
+.info b{color:var(--asche);font-weight:600}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:9;padding:20px;cursor:zoom-out}
+#lb.an{display:flex}
+#lb img{max-width:100%;max-height:100%;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+#lb .zu{position:absolute;top:14px;right:18px;color:#fff;font-size:30px;line-height:1}
+</style></head>
+<body>
+<header>
+  <div><div class="k">Ehl-i Kebap · Zeitschrift</div><h1>Ganzseitige Anzeige A4, <em>12 Versionen</em></h1></div>
+  <p>Alle Versionen sind druckfertig: A4 mit 3 mm Beschnitt rundum, Schriften eingebettet. Die Gerichte sind echte Fotos aus dem Shooting im Restaurant, dazu Stimmungsbilder aus Higgsfield. Bild anklicken für die große Ansicht.</p>
+</header>
+<main id="liste"></main>
+<div class="info"><b>Für den Druck:</b> PDF an den Verlag schicken (216 x 303 mm, Endformat 210 x 297 mm). Text und Logos liegen mindestens 10 mm vom Seitenrand entfernt. Das JPG mit 300 dpi ist für WhatsApp und als Ausweichdatei gedacht.</div>
+<div id="lb"><span class="zu">×</span><img alt=""></div>
+<script>
+const V=[
+ {id:"v1_ates",t:"Ateş",d:"Dunkel und edel. Große Grillplatte über offener Glut, darunter Logo, Spruch und alle Angaben. Am nächsten an der Speisekarte."},
+ {id:"v2_sofra",t:"Sofra",d:"Der gedeckte Tisch von oben. 13 echte Teller rund um ein Medaillon mit Stier, unten eine Menükarte mit allen Angaben."},
+ {id:"v3_mutfak",t:"Mutfak",d:"Hell wie ein Magazin. 12 echte Gerichte im Raster mit türkischem und deutschem Namen, unten ein rotes Band mit Telefon."},
+ {id:"v4_aciktin",t:"Acıktın mı?",d:"Rotes Poster mit großer Frage. Die Teller laufen über die Ränder, der Stempel 100 % Helal fällt sofort auf."},
+ {id:"v5_firin",t:"Fırın",d:"Steinofen oben, darunter ein Fächer aus fünf echten Pides, eine Reihe mit Grill, Fisch und Dessert und alle Angaben."},
+ {id:"v6_sofrada",t:"Sofrada yer var",d:"Neu, Midjourney 8.2 HD und Higgsfield 4K. Die volle Festtafel von oben, viele Hände greifen zu. Wärme, Familie, Gemeinschaft."},
+ {id:"v7_kule",t:"Berlin'in kulesi",d:"Neu, Midjourney 8.2 HD und Higgsfield 4K. Ein Adana Spieß steht wie der Fernsehturm vor der Berliner Skyline. Der leckerste Turm der Stadt."},
+ {id:"v8_katman",t:"Katman katman",d:"Neu, Midjourney 8.2 HD und Higgsfield 4K. Ein Dürüm fliegt Schicht für Schicht auseinander, Fleisch, Lavaş, Zwiebeln, Soße in der Luft."},
+ {id:"v9_mangal",t:"Mangal",d:"Neu im Stil von Version 1, Midjourney 8.2 HD und Higgsfield 4K. Gemischte Grillplatte auf Kupfer vor glühender Holzkohle, Adana, Tavuk Şiş, Pirzola."},
+ {id:"v10_firin",t:"Taş fırın",d:"Neu im Stil von Version 1, Midjourney 8.2 HD. Frische Pides und Lahmacun auf dem Holzbrett vor dem lodernden Steinofen."},
+ {id:"v11_steak_tr",t:"Helal Steak (TR)",d:"Neu nach Vorgabe des Kunden, türkisch. Halal Steak vom Fleischermeister mit den drei Special Cuts Bonfile, Antrikot und Roastbeef samt Preisen, Fotos aus Midjourney 8.2 HD."},
+ {id:"v12_steak_de",t:"Halal-Steak (DE)",d:"Gleiche Anzeige auf Deutsch. Rinderfilet (Lokum), Entrecôte und Roastbeef je auf dem Brett, mit Gewicht und Preis."}
+];
+document.getElementById('liste').innerHTML=V.map((v,i)=>`<article class="v">
+ <button class="bild" data-src="img/${v.id}_gross.jpg" aria-label="${v.t} groß ansehen"><img src="img/${v.id}_klein.jpg" alt="Anzeige ${v.t}" loading="lazy"></button>
+ <div class="t"><div class="nr">VERSION ${i+1}</div><h2>${v.t}</h2><p>${v.d}</p>
+ <div class="dl"><a class="pdf" href="druck/Ehli_Kebap_Anzeige_${v.id}.pdf" download>Druck PDF</a><a href="img/${v.id}.jpg" download>JPG</a></div></div></article>`).join('');
+const lb=document.getElementById('lb');
+document.querySelectorAll('button.bild').forEach(b=>b.onclick=()=>{lb.querySelector('img').src=b.dataset.src;lb.classList.add('an')});
+lb.onclick=()=>lb.classList.remove('an');
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('an')});
+</script>
+</body></html>

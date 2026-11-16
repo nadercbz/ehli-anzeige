@@ -1,0 +1,14 @@
+
+@font-face{font-family:Gloock;src:url(fonts/gloock-400-normal-latin.woff2),url(fonts/gloock-400-normal-latin-ext.woff2)}
+@font-face{font-family:Gloock;src:url(fonts/gloock-400-normal-latin-ext.woff2);unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Caveat;font-weight:600;src:url(fonts/caveat-600-normal-latin.woff2)}
+@font-face{font-family:Caveat;font-weight:600;src:url(fonts/caveat-600-normal-latin-ext.woff2);unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:IT;font-weight:300;src:url(fonts/inter-tight-300-normal-latin.woff2)}
+@font-face{font-family:IT;font-weight:300;src:url(fonts/inter-tight-300-normal-latin-ext.woff2);unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:IT;font-weight:500;src:url(fonts/inter-tight-500-normal-latin.woff2)}
+@font-face{font-family:IT;font-weight:500;src:url(fonts/inter-tight-500-normal-latin-ext.woff2);unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:IT;font-weight:700;src:url(fonts/inter-tight-700-normal-latin.woff2)}
+@font-face{font-family:IT;font-weight:700;src:url(fonts/inter-tight-700-normal-latin-ext.woff2);unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:IT;font-weight:800;src:url(fonts/inter-tight-800-normal-latin.woff2)}
+@font-face{font-family:IT;font-weight:800;src:url(fonts/inter-tight-800-normal-latin-ext.woff2);unicode-range:U+0100-024F,U+1E00-1EFF}
+
